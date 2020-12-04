@@ -1,3 +1,3 @@
 # Signature Pad
 ### Simple signature pad with JavaScript
-view: >>  https://tarunno.github.io/ 
+<b>view:</b>  https://tarunno.github.io/ 
