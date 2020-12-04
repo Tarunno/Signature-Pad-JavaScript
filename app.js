@@ -4,10 +4,15 @@ const canvas = document.querySelector("canvas"),
 var draw = false,
  	color = "black";
 
+resize();
 canvas.addEventListener("mousedown", start);
 canvas.addEventListener("mouseup", end);
 canvas.addEventListener("mouseleave",end);
 canvas.addEventListener("mousemove", drawing);
+canvas.addEventListener("touchstart", start);
+canvas.addEventListener("touchend", end);
+canvas.addEventListener("touchcancel", end);
+canvas.addEventListener("touchmove", drawing);
 
 const saveBtn = document.querySelector(".save"),
 	  clearBtn = document.querySelector(".clear");
@@ -35,7 +40,15 @@ function drawing(e) {
 	var pos = canvas.getBoundingClientRect();
 	var extraHeight = pos.top;
 	var extraWidth = pos.left;
-	myCanvas.lineTo(e.clientX-extraWidth, e.clientY-extraHeight);
+	try{
+		myCanvas.lineTo(e.touches[0].clientX-extraWidth, e.touches[0].clientY-extraHeight);
+	}
+	catch(err){
+		console.log("Touch not activated!");
+	}
+	finally{
+		myCanvas.lineTo(e.clientX-extraWidth, e.clientY-extraHeight);
+	}
 	myCanvas.stroke();
 }
 
@@ -50,4 +63,11 @@ function saveCanvas() {
 
 function clearCanvas(){
 	myCanvas.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function resize(){
+	window.innerWidth > 400? canvas.width = 400: canvas.width = window.innerWidth;
+	window.addEventListener('resize', function(){
+		window.innerWidth > 400? canvas.width = 400: canvas.width = window.innerWidth;
+	});
 }
