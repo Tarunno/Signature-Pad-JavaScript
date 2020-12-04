@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+:root{
+	--primary: #212121;
+	--secondary: #3a4042;
+	--red: #c40000;
+	--blue: #2146c2;
+	--black: #111;
+	--text: #f4f4f4;
+}
+::-webkit-scrollbar{
+	width: 5px;
+	background-color: #333;
+}
+::-webkit-scrollbar-thumb{
+	background-color: var(--primary);
+}
+body{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--secondary);
+}
+header{
+	width: 100%;
+	height: 100px;
+	background-color: var(--primary);
+	color: var(--text);
+	font-family: 'Lobster', cursive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+}
+main{
+	width: 400px;
+	height: 85vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+canvas {
+	border: 3px solid var(--primary);
+	border-radius: 10px;
+	background-color: #dedede;
+	width: 400px;
+	height: 400px;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 0px;
+}
+.red{
+	padding: 19px;
+	border: none;
+	background-color: var(--red);
+}
+.blue{
+	padding: 19px;
+	border: none;
+	background-color: var(--blue);
+}
+.black{
+	padding: 19px;
+	border: none;
+	background-color: var(--black);
+}
+.save, .clear{
+	padding: 13px;
+	border: none;
+	background-color: var(--primary);
+	color: var(--text);
+}
+button{
+	cursor: pointer;
+	transition: .2s;
+	border-radius: 5px;
+}
+button:hover{
+	filter: brightness(70%);
+}
