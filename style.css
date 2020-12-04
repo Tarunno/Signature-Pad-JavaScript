@@ -21,7 +21,7 @@
 	background-color: var(--primary);
 }
 body{
-	width: 100%;
+	width: 100vw;
 	height: auto;
 	display: flex;
 	flex-direction: column;
@@ -93,7 +93,16 @@ button:hover{
 	text-align: right;
 	color: #f4f4f4;
 	font-family: 'Lobster', cursive;
-	margin-top: 10px;
+	margin-top: -20px;
 	margin-right: 20px;
+	font-size: 20px;
 }
 
+@media screen and (max-width: 400px) {
+	main{
+		width: 100%;
+	}
+	canvas{
+		width: 100%;
+	}
+}
