@@ -11,6 +11,7 @@ canvas.addEventListener("mouseleave",end);
 canvas.addEventListener("mousemove", drawing);
 canvas.addEventListener("touchstart", start);
 canvas.addEventListener("touchend", end);
+canvas.addEventListener("touchcancel", end);
 canvas.addEventListener("touchmove", drawing);
 
 const saveBtn = document.querySelector(".save"),
@@ -40,7 +41,7 @@ function drawing(e) {
 	var extraHeight = pos.top;
 	var extraWidth = pos.left;
 	try{
-		window.scrollTo(0,0);
+		window.scrollTop();
 		myCanvas.lineTo(e.touches[0].clientX-extraWidth, e.touches[0].clientY-extraHeight);
 	}
 	catch(err){
