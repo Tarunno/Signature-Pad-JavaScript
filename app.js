@@ -41,6 +41,7 @@ function drawing(e) {
 	var extraHeight = pos.top;
 	var extraWidth = pos.left;
 	try{
+		window.scrollTo(0,0);
 		myCanvas.lineTo(e.touches[0].clientX-extraWidth, e.touches[0].clientY-extraHeight);
 	}
 	catch(err){
