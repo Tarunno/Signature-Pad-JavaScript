@@ -11,7 +11,6 @@ canvas.addEventListener("mouseleave",end);
 canvas.addEventListener("mousemove", drawing);
 canvas.addEventListener("touchstart", start);
 canvas.addEventListener("touchend", end);
-canvas.addEventListener("touchcancel", end);
 canvas.addEventListener("touchmove", drawing);
 
 const saveBtn = document.querySelector(".save"),
