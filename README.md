@@ -1,1 +1,2 @@
-# Tarunno.github.io-Signature_pad
+# Signature Pad
+### Simple signature pad with JavaScript
