@@ -2,7 +2,7 @@ const canvas = document.querySelector("canvas"),
 	  myCanvas = canvas.getContext("2d");
 
 var draw = false,
- 	color = "black";
+    color = "black";
 
 resize();
 canvas.addEventListener("mousedown", start);
@@ -15,7 +15,7 @@ canvas.addEventListener("touchcancel", end);
 canvas.addEventListener("touchmove", drawing);
 
 const saveBtn = document.querySelector(".save"),
-	  clearBtn = document.querySelector(".clear");
+      clearBtn = document.querySelector(".clear");
 saveBtn.addEventListener('click', saveCanvas);
 clearBtn.addEventListener('click', clearCanvas);
 
